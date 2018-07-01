@@ -64,8 +64,8 @@ const vm = new Vue({
           return {
             homeTeamName: d.homeTeamName,
             awayTeamName: d.awayTeamName,
-            goalsHomeTeam: d.extraTime ? d.extraTime.goalsHomeTeam : d.result.goalsHomeTeam,
-            goalsAwayTeam: d.extraTime ? d.extraTime.goalsAwayTeam : d.result.goalsAwayTeam
+            goalsHomeTeam: d.result.extraTime ? d.result.extraTime.goalsHomeTeam + d.result.goalsHomeTeam : d.result.goalsHomeTeam,
+            goalsAwayTeam: d.result.extraTime ? d.result.extraTime.goalsAwayTeam + d.result.goalsAwayTeam : d.result.goalsAwayTeam
           };
         });
 
